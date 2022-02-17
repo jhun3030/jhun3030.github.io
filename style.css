@@ -1,0 +1,7 @@
+/* CSS Variable */
+/* Reference :  https://developer.mozilla.org/en-US/docs/Web/CSS/--* */
+:root {
+  --font-size: 32px;
+  --backgound-color: black;
+  --base-space: 8px;
+}
