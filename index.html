@@ -28,7 +28,7 @@
     <!-- Nav Bar -->
     <nav id="navbar">
       <div class="navbar__logo">
-        <img src="./imgs/logo.png" alt="jaeheon's logo" />
+        <a href="#"><img src="./imgs/logo_2.png" alt="jaeheon's logo" /></a>
       </div>
       <ul class="navbar__menu">
         <li class="navbar__menu__item active">Home</li>
@@ -42,21 +42,21 @@
     <!-- Home -->
     <section id="home">
       <img src="./imgs/profile.jpg" alt="jh's profile photo" class="home__avatar" />
-      <p class="home__title">
+      <h1 class="home__title">
         Hello,<br />
         I'm Jaeheon!
-      </p>
-      <h1 class="home__description">A Software Engineer major in Electronic Engineering</h1>
+      </h1>
+      <h2 class="home__description">A Software Engineer major in Electronic Engineering</h2>
       <figure class="home__quote">
         <blockquote cite="https://twitter.com/stephenrcovey/status/967414111666569226">
-          <p>"I am not a product of my circumstances. I am a product of my decisions."</p>
+          <p class="quote__content">"I am not a product of my circumstances. I am a product of my decisions."</p>
         </blockquote>
-        <figcaption>- Stephen R. Covey</figcaption>
+        <figcaption class="quote__author">- Stephen R. Covey -</figcaption>
       </figure>
     </section>
 
     <!-- About -->
-    <section id="about">
+    <section id="about" class="section">
       <h2>About me</h2>
       <p lang="ko">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, necessitatibus eos ratione minus corporis nesciunt modi libero nobis
@@ -72,58 +72,50 @@
           <div class="major__icon">
             <i class="fa-solid fa-code"></i>
           </div>
-          <div class="major__title">
-            <h3>Web Development</h3>
+          <h3 class="major__title">Web Development</h3>
+          <p class="major__description">HTML, CSS, JavaScript <br />DOM Manipulation</p>
+        </div>
+        <div class="major">
+          <div class="major__icon">
+            <i class="fa-solid fa-desktop"></i>
           </div>
-          <div class="major__description">
-            <p>HTML, CSS, JavaScript <br />DOM Manipulation</p>
+          <h3 class="major__title">CS Fundamentals</h3>
+          <p class="major__description">
+            Digital Logic Circuit<br />
+            Computer Architecture
+          </p>
+        </div>
+        <div class="major">
+          <div class="major__icon">
+            <i class="fa-solid fa-bolt-lightning"></i>
           </div>
-          <div class="major">
-            <div class="major__icon">
-              <i class="fa-solid fa-desktop"></i>
-            </div>
-            <div class="major__title">
-              <h3>CS Fundamentals</h3>
-            </div>
-            <div class="major__description">
-              <p>
-                Digital Logic Circuit<br />
-                Computer Architecture
-              </p>
-            </div>
-          </div>
-          <div class="major">
-            <div class="major__icon">
-              <i class="fa-solid fa-bolt-lightning"></i>
-            </div>
-            <div class="major__title">
-              <h3>Electronic Engineering</h3>
-            </div>
-            <div class="major__description">
-              <p>
-                Electromagnetism, <br />
-                Circuit Analysis<br />
-                Engineering Mathematics
-              </p>
-            </div>
-          </div>
+          <h3 class="major__title">Electronic Engineering</h3>
+          <p class="major__description">
+            Electromagnetism, <br />
+            Circuit Analysis<br />
+            Engineering Mathematics
+          </p>
         </div>
       </div>
       <div class="about__jobs">
         <div class="job">
           <img src="./imgs/kwangwoon.jpeg" alt="Kwangwoon university logo" class="job__logo" />
-          <p class="job__name">Currently, studying at Kwangwoon University major in Electronic Convergence Engineering.</p>
-          <p class="job__period">2015.03 - Until Now</p>
+          <div class="job__description">
+            <p class="job__name">Currently, studying at Kwangwoon University major in Electronic Convergence Engineering.</p>
+            <p class="job__period">2015.03 - Until Now</p>
+          </div>
         </div>
         <div class="job">
           <img src="./imgs/paris.png" alt="paris logo" class="job__logo" />
-          <p class="job__name">In the past, worked part-time at Paris Baguette as store service worker and manager.</p>
-          <p class="job__period">2017.02 - 2019.08</p>
+          <div class="job__description">
+            <p class="job__name">In the past, worked part-time at Paris Baguette as store service worker and manager.</p>
+            <p class="job__period">2017.02 - 2019.08</p>
+          </div>
         </div>
       </div>
     </section>
     <!-- Skills -->
-    <section id="skills">
+    <section id="skills" class="section">
       <h2>Skills</h2>
       <h3>Skills & Attributes</h3>
       <p>
@@ -204,7 +196,7 @@
       </div>
     </section>
     <!-- Works -->
-    <section id="work">
+    <section id="work" class="section">
       <h2>My Work</h2>
       <h3>Projects</h3>
       <div class="work__categories">
@@ -274,7 +266,7 @@
       </div>
     </section>
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" class="section">
       <h2 class="contact__title">Let's Talk!</h2>
       <h3 class="contact__email">jhun3030@gmail.com</h3>
       <div class="contact__links">
