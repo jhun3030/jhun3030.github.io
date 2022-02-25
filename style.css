@@ -139,9 +139,11 @@ blockquote {
 }
 
 .navbar__toggle-btn {
+  background: transparent;
+  border: none;
   position: absolute;
-  top: 50px;
-  right: 16px;
+  top: 40px;
+  right: 0px;
   font-size: 32px;
   color: var(--color-white);
   transform: translate(-50%, -50%);
@@ -484,6 +486,7 @@ blockquote {
   #navbar {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
   .navbar__menu {
