@@ -99,7 +99,7 @@ blockquote {
 #navbar {
   display: flex;
   justify-content: space-between;
-  background: url(./imgs/home-background.png) center/cover no-repeat;
+  background: none;
   align-items: center;
   color: var(--color-white);
   padding: 16px;
@@ -129,10 +129,13 @@ blockquote {
   background-color: var(--color-dark-ocean);
 }
 
+.backgound {
+  background: url(./imgs/home-background.png) center/cover no-repeat;
+}
+
 /* Home */
 
 #home {
-  background: url(./imgs/home-background.png) center/cover no-repeat;
   padding: 40px;
   text-align: center;
 }
@@ -254,7 +257,7 @@ blockquote {
 
 /* Skill */
 #skills {
-  background-color: var(--color-yellow);
+  background-color: var(--color-blue);
 }
 
 .skillset__description {
@@ -309,4 +312,100 @@ blockquote {
 .tools,
 .etc {
   padding: 20px;
+}
+
+/* Work */
+.work__categories {
+  margin: 40px;
+}
+
+.category__btn {
+  border: 1px solid var(--color-dark-white);
+  border-radius: 4px var(--size-border-radius);
+  font-size: var(--font-regular);
+  padding: 8px 48px;
+}
+
+.category__btn.active,
+.category__btn:hover {
+  background-color: var(--color-dark-ocean);
+}
+
+.category__btn.active .category__count,
+.category__btn:hover .category__count {
+  opacity: 1;
+  top: 0;
+}
+
+.category__count {
+  display: inline-block;
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  color: var(--color-white);
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  position: relative;
+  top: -20px;
+  left: 4px;
+  opacity: 0;
+  transition: all var(--annimation-duration) ease-in;
+}
+
+.work__projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 280px;
+  height: 250px;
+  margin: 2px;
+  background-color: var(--color-light-white);
+}
+
+.project__img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.project__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all var(--annimation-duration) ease-in;
+  transform: translateY(10px);
+}
+
+.project:hover .project__description {
+  opacity: 0.8;
+  transform: translateY(0px);
+}
+
+.project__description h4 {
+  color: var(--color-white);
+}
+
+.project__description h4:after {
+  content: '';
+  width: 25px;
+  height: 2px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 8px;
+  background-color: var(--color-dark-white);
+  display: block;
 }
