@@ -105,13 +105,14 @@ blockquote {
   align-items: center;
   color: var(--color-white);
   padding: 16px;
-  height: 90px;
-  transition: all var(--annimation-duration) ease-in;
+  height: 80px;
+  transition: all var(--annimation-duration) ease-in-out;
   z-index: 100;
 }
 
 #navbar.navbar--dark {
   background-color: var(--color-ocean);
+  padding: 4px;
 }
 
 .navbar__menu {
@@ -119,7 +120,7 @@ blockquote {
 }
 
 .navbar__logo img {
-  width: 80px;
+  width: 65px;
   height: auto;
 }
 
@@ -161,6 +162,7 @@ blockquote {
   padding: 40px;
   padding-top: 120px;
   text-align: center;
+  /* height: 100vh; */
 }
 
 .home__avatar {
@@ -231,7 +233,7 @@ blockquote {
   height: 170px;
   font-size: 70px;
   line-height: 170px;
-  margin: 0 auto;
+  margin: 0;
   border: 1px solid var(--color-blue);
   border-radius: 50%;
   margin-bottom: 16px;
@@ -291,27 +293,21 @@ blockquote {
 
 /* Skill */
 #skills {
+  box-sizing: border-box;
+  padding: 50px;
   background-color: var(--color-blue);
 }
 
-.skillset__description {
-  margin-bottom: 20px;
-}
-
 .skillset {
-  display: flex;
   background-color: var(--color-light-grey);
   color: var(--color-light-white);
+  padding: 40px;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .skillset__title {
   color: var(--color-white);
-}
-
-.skillset__left {
-  flex-basis: 60%;
-  background-color: var(--color-dark-grey);
-  padding: 20px 40px;
 }
 
 .skill__description {
