@@ -239,11 +239,15 @@ blockquote {
 }
 
 .section__container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 /* About */
+
+.about__title {
+  margin-bottom: 80px;
+}
 
 .about__description span {
   line-height: 150%;
@@ -332,6 +336,7 @@ blockquote {
   padding: 40px;
   width: 70%;
   margin: 0 auto;
+  border-radius: var(--size-border-radius);
 }
 
 .skillset__title {
