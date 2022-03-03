@@ -37,3 +37,10 @@ const controlOpacity = function () {
 };
 
 document.addEventListener(`scroll`, controlOpacity);
+
+// arrow button
+const arrow = document.querySelector(`.arrow_btn`);
+arrow.addEventListener('click', function () {
+  const scrollToHome = document.querySelector(`#home`);
+  scrollToHome.scrollIntoView({ behavior: `smooth` });
+});

@@ -155,6 +155,34 @@ blockquote {
   background: transparent;
 }
 
+/* arrow btn */
+
+.arrow_btn {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-ocean);
+  border: 1px solid var(--color-blue);
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.arrow_btn i {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: var(--font-medium);
+  color: var(--color-white);
+}
+
 /* Home */
 
 #home {
