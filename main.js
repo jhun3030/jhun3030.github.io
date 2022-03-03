@@ -16,11 +16,24 @@ document.addEventListener(`scroll`, function () {
 const navbarMenu = document.querySelector(`.navbar__menu`);
 navbarMenu.addEventListener(`click`, function (event) {
   const target = event.target;
+  // console.log(target);
   const link = target.dataset.link;
+  // console.log(link);
   if (link === undefined) {
     return;
   }
-  console.log(link);
   const scrollTo = document.querySelector(link);
   scrollTo.scrollIntoView({ behavior: `smooth` });
 });
+
+// transparent home smooth
+const home = document.querySelector(`.home__container`);
+const homeHeight = home.getBoundingClientRect().height;
+
+const controlOpacity = function () {
+  console.log(1 - window.scrollY / homeHeight);
+  home.style.opacity = `${1 - window.scrollY / homeHeight}`;
+  return 1 - window.scrollY / homeHeight;
+};
+
+document.addEventListener(`scroll`, controlOpacity);
