@@ -299,7 +299,10 @@ blockquote {
 
 .job {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .job__logo {
@@ -328,6 +331,14 @@ blockquote {
   box-sizing: border-box;
   padding: 50px;
   background-color: var(--color-blue);
+}
+
+#skills h2 {
+  margin-bottom: 30px;
+}
+
+#skills h3 {
+  margin-bottom: 50px;
 }
 
 .skillset {
@@ -378,6 +389,13 @@ blockquote {
 }
 
 /* Work */
+
+#work h2 {
+  margin-bottom: 30px;
+}
+#work h3 {
+  margin-bottom: 50px;
+}
 .work__categories {
   margin: 40px;
 }
@@ -472,6 +490,10 @@ blockquote {
   margin-top: 8px;
   background-color: var(--color-dark-white);
   display: block;
+}
+
+.work__state {
+  margin-top: 10px;
 }
 
 /* Contact */
