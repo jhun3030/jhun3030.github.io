@@ -12,6 +12,11 @@ document.addEventListener(`scroll`, function () {
   }
 });
 
+const scrolling = function (selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: `smooth` });
+};
+
 // Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector(`.navbar__menu`);
 navbarMenu.addEventListener(`click`, function (event) {
@@ -22,8 +27,7 @@ navbarMenu.addEventListener(`click`, function (event) {
   if (link === undefined) {
     return;
   }
-  const scrollTo = document.querySelector(link);
-  scrollTo.scrollIntoView({ behavior: `smooth` });
+  scrolling(link);
 });
 
 // transparent home smooth
@@ -38,9 +42,17 @@ const controlOpacity = function () {
 
 document.addEventListener(`scroll`, controlOpacity);
 
-// arrow button
-const arrow = document.querySelector(`.arrow_btn`);
-arrow.addEventListener('click', function () {
-  const scrollToHome = document.querySelector(`#home`);
-  scrollToHome.scrollIntoView({ behavior: `smooth` });
+// Show arrow button when scrolling down
+const arrowUp = document.querySelector(`.arrow-up`);
+document.addEventListener(`scroll`, function () {
+  if (window.scrollY > homeHeight / 2) {
+    arrowUp.classList.add(`visible`);
+  } else {
+    arrowUp.classList.remove(`visible`);
+  }
+});
+
+// Click on the "arrow up" button
+arrowUp.addEventListener(`click`, function () {
+  scrolling(`#home`);
 });

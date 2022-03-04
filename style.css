@@ -95,6 +95,13 @@ blockquote {
   margin: 0;
 }
 
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 /* Navbar */
 
 #navbar {
@@ -154,34 +161,6 @@ blockquote {
 
 .navbar__toggle-btn::before {
   background: transparent;
-}
-
-/* arrow btn */
-
-.arrow_btn {
-  position: fixed;
-  right: 50px;
-  bottom: 50px;
-  width: 50px;
-  height: 50px;
-  background-color: var(--color-ocean);
-  border: 1px solid var(--color-blue);
-  border-radius: 50%;
-  z-index: 100;
-}
-
-.arrow_btn i {
-  position: fixed;
-  right: 50px;
-  bottom: 50px;
-  display: block;
-  margin: 0 auto;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  font-size: var(--font-medium);
-  color: var(--color-white);
 }
 
 /* Home */
@@ -407,7 +386,7 @@ blockquote {
   border: 1px solid var(--color-dark-white);
   border-radius: 4px var(--size-border-radius);
   font-size: var(--font-regular);
-  padding: 8px 48px;
+  padding: 8px 28px;
 }
 
 .category__btn.active,
@@ -530,6 +509,56 @@ blockquote {
 .contact__links i:hover {
   transform: scale(1.2);
 }
+
+/* Scroll Button */
+.arrow-up {
+  opacity: 0;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-dark-ocean);
+  color: var(--color-white);
+  border-radius: 50%;
+  padding: 3px;
+  pointer-events: none;
+  transition: all 300ms ease-in;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* arrow btn */
+
+/* .arrow_btn {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-ocean);
+  border: 1px solid var(--color-blue);
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.arrow_btn i {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: var(--font-medium);
+  color: var(--color-white);
+} */
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
