@@ -583,7 +583,7 @@ button {
   }
 
   .navbar__toggle-btn i {
-    display: block;
+    font-size: 1em;
   }
 
   #navbar {
