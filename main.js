@@ -67,7 +67,3 @@ workBtnContainer.addEventListener(`click`, function (e) {
   const filter = e.target.dataset.filter;
   console.log(filter);
 });
-
-document.querySelectorAll(`.disabled`).addEventListener(`click`, function () {
-  alert(`Comming Soon!`);
-});
