@@ -120,7 +120,6 @@ button {
 
 #navbar.navbar--dark {
   background-color: var(--color-ocean);
-  padding: 4px;
 }
 
 .navbar__menu {
@@ -136,11 +135,12 @@ button {
   padding: 8px 12px;
   margin: 0 4px;
   cursor: pointer;
+  border: 1px solid transparent;
   border-radius: var(--size-border-radius);
 }
 
-.navbar__menu__item.active {
-  border: 1px solid var(--color-white);
+.navbar__menu__item:hover {
+  border-color: var(--color-white);
 }
 
 .navbar__menu__item:hover {
@@ -389,13 +389,13 @@ button {
   padding: 8px 28px;
 }
 
-.category__btn.active,
+.category__btn.selected,
 .category__btn:hover {
   background-color: var(--color-dark-ocean);
   color: var(--color-white);
 }
 
-.category__btn.active .category__count,
+.category__btn.selected .category__count,
 .category__btn:hover .category__count {
   opacity: 1;
   top: 0;
@@ -573,6 +573,11 @@ button {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+  .navbar__logo img {
+    position: relative;
+    top: 6px;
+  }
+
   .navbar__toggle-btn {
     display: block;
   }
@@ -580,13 +585,26 @@ button {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    background-color: var(--color-ocean);
+    padding: 0;
   }
 
   .navbar__menu {
     flex-direction: column;
     text-align: center;
+    width: 100%;
     display: none;
+  }
+
+  .navbar__menu.open {
+    display: block;
+    background-color: var(--color-ocean);
+    width: 100%;
+    margin: 0;
+  }
+
+  .navbar--dark {
+    width: 100%;
   }
 
   .about__majors {

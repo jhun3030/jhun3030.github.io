@@ -27,7 +27,14 @@ navbarMenu.addEventListener(`click`, function (event) {
   if (link === undefined) {
     return;
   }
+  navbarMenu.classList.remove(`open`);
   scrolling(link);
+});
+
+// Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector(`.navbar__toggle-btn`);
+navbarToggleBtn.addEventListener(`click`, function () {
+  navbarMenu.classList.toggle(`open`);
 });
 
 // transparent home smooth
@@ -61,18 +68,24 @@ arrowUp.addEventListener(`click`, function () {
 const workBtnContainer = document.querySelector(`.work__categories`);
 const projectContainer = document.querySelector(`.work__projects`);
 const projects = document.querySelectorAll(`.project`);
-console.log(projects);
 
 workBtnContainer.addEventListener(`click`, function (e) {
   const filter = e.target.dataset.filter ? e.target.dataset.filter : e.target.parentNode.dataset.filter;
   if (filter == null) {
     return;
   }
+
+  // Remove selection from the previous istem and select the new item
+  const active = document.querySelector(`.category__btn.selected`);
+  active.classList.remove(`selected`);
+  const target = e.target.nodeName === `BUTTON` ? e.target : e.target.parentNode;
+  target.classList.add(`selected`);
+
   projectContainer.classList.add(`anim-out`);
 
   setTimeout(function () {
     projects.forEach(function (project) {
-      console.log(project.dataset.type);
+      // console.log(project.dataset.type);
       if (filter === `*` || filter === project.dataset.type) {
         project.classList.remove(`invisible`);
       } else {
