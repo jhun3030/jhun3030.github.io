@@ -612,6 +612,10 @@ button {
     width: 100%;
   }
 
+  .home__quote {
+    display: none;
+  }
+
   .about__majors {
     flex-direction: column;
   }
