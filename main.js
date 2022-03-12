@@ -35,7 +35,7 @@ const home = document.querySelector(`.home__container`);
 const homeHeight = home.getBoundingClientRect().height;
 
 const controlOpacity = function () {
-  console.log(1 - window.scrollY / homeHeight);
+  // console.log(1 - window.scrollY / homeHeight);
   home.style.opacity = `${1 - window.scrollY / homeHeight}`;
   return 1 - window.scrollY / homeHeight;
 };
@@ -64,6 +64,21 @@ const projects = document.querySelectorAll(`.project`);
 console.log(projects);
 
 workBtnContainer.addEventListener(`click`, function (e) {
-  const filter = e.target.dataset.filter;
-  console.log(filter);
+  const filter = e.target.dataset.filter ? e.target.dataset.filter : e.target.parentNode.dataset.filter;
+  if (filter == null) {
+    return;
+  }
+  projectContainer.classList.add(`anim-out`);
+
+  setTimeout(function () {
+    projects.forEach(function (project) {
+      console.log(project.dataset.type);
+      if (filter === `*` || filter === project.dataset.type) {
+        project.classList.remove(`invisible`);
+      } else {
+        project.classList.add(`invisible`);
+      }
+    });
+    projectContainer.classList.remove(`anim-out`);
+  }, 300);
 });
