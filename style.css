@@ -583,6 +583,10 @@ button {
     padding: 0;
   }
 
+  .nav__toggle-btn i {
+    padding: 0;
+  }
+
   #navbar {
     flex-direction: column;
     align-items: flex-start;
