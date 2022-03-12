@@ -580,6 +580,8 @@ button {
 
   .navbar__toggle-btn {
     display: block;
+    position: absolute;
+    right: 3px;
   }
 
   #navbar {
