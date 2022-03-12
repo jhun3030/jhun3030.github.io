@@ -12,12 +12,12 @@ document.addEventListener(`scroll`, function () {
   }
 });
 
+// Handle scrolling when tapping on the navbar menu
 const scrolling = function (selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: `smooth` });
 };
 
-// Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector(`.navbar__menu`);
 navbarMenu.addEventListener(`click`, function (event) {
   const target = event.target;
@@ -55,4 +55,19 @@ document.addEventListener(`scroll`, function () {
 // Click on the "arrow up" button
 arrowUp.addEventListener(`click`, function () {
   scrolling(`#home`);
+});
+
+// Projects
+const workBtnContainer = document.querySelector(`.work__categories`);
+const projectContainer = document.querySelector(`.work__projects`);
+const projects = document.querySelectorAll(`.project`);
+console.log(projects);
+
+workBtnContainer.addEventListener(`click`, function (e) {
+  const filter = e.target.dataset.filter;
+  console.log(filter);
+});
+
+document.querySelectorAll(`.disabled`).addEventListener(`click`, function () {
+  alert(`Comming Soon!`);
 });

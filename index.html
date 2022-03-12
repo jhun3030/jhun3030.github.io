@@ -131,10 +131,10 @@
             <div class="skill">
               <div class="skill__description">
                 <span>HTML</span>
-                <span>70%</span>
+                <span>60%</span>
               </div>
               <div class="skill__bar">
-                <div class="skill__value" style="width: 70%"></div>
+                <div class="skill__value" style="width: 60%"></div>
               </div>
             </div>
             <div class="skill">
@@ -149,7 +149,7 @@
             <div class="skill">
               <div class="skill__description">
                 <span>JavaScript</span>
-                <span>60%</span>
+                <span>50%</span>
               </div>
               <div class="skill__bar">
                 <div class="skill__value" style="width: 50%"></div>
@@ -158,19 +158,19 @@
             <div class="skill">
               <div class="skill__description">
                 <span>C/C++</span>
-                <span>40%</span>
+                <span>30%</span>
               </div>
               <div class="skill__bar">
-                <div class="skill__value" style="width: 40%"></div>
+                <div class="skill__value" style="width: 30%"></div>
               </div>
             </div>
             <div class="skill">
               <div class="skill__description">
                 <span>Python</span>
-                <span>50%</span>
+                <span>40%</span>
               </div>
               <div class="skill__bar">
-                <div class="skill__value" style="width: 50%"></div>
+                <div class="skill__value" style="width: 40%"></div>
               </div>
             </div>
           </div>
@@ -183,55 +183,71 @@
       <h2>My Work</h2>
       <h3>Done or In progress</h3>
       <div class="work__categories">
-        <button class="category__btn active">All<span class="category__count">6</span></button>
-        <button class="category__btn">HTML & CSS<span class="category__count">1</span></button>
-        <button class="category__btn">JavaScript<span class="category__count">5</span></button>
+        <button class="category__btn active" data-filter="*">All<span class="category__count">6</span></button>
+        <button class="category__btn" data-filter="htmlCss">HTML & CSS<span class="category__count">1</span></button>
+        <button class="category__btn" data-filter="javaScript">JavaScript<span class="category__count">5</span></button>
       </div>
       <!-- image should be resized!(image compression) -->
       <div class="section__container">
         <div class="work__projects">
-          <a href="#" class="project" target="_blank">
+          <a href="https://jhun3030.github.io/" class="project" target="_blank" data-type="htmlCss javaScript">
             <img src="./imgs/projects/work_project_1.png" class="project__img" alt="project1 image" />
             <div class="project__description">
               <h4>Portfolio Website</h4>
               <span>My first website Project</span>
             </div>
           </a>
-          <a href="#" class="project" target="_blank">
-            <img src="./imgs/projects/work_project_2.gif" class="project__img" alt="project2 image" />
+          <a
+            href="https://github.com/jhun3030/complete-javascript-course-master/tree/main/05-Guess-My-Number/starter"
+            class="project"
+            target="_blank"
+            data-type="javaScript"
+          >
+            <img src="./imgs/projects/work_project_2.png" class="project__img" alt="project2 image" />
             <div class="project__description">
               <h4>Guess My Number!</h4>
               <span>JavaScript & DOM Project 1</span>
             </div>
           </a>
-          <a href="https://github.com/jhun3030/complete-javascript-course-master/tree/main/06-Modal/starter" class="project" target="_blank">
-            <img src="./imgs/projects/work_project_3.gif" class="project__img" alt="project3 image" />
+          <a
+            href="https://github.com/jhun3030/complete-javascript-course-master/tree/main/06-Modal/starter"
+            class="project"
+            target="_blank"
+            data-type="javaScript"
+          >
+            <img src="./imgs/projects/work_project_3.png" class="project__img" alt="project3 image" />
             <div class="project__description">
               <h4>Modal Window</h4>
               <span>Make modal using JavaScript</span>
             </div>
           </a>
-          <a href="#" class="project" target="_blank">
-            <img src="./imgs/projects/project4.png" class="project__img" alt="project4 image" />
+          <a
+            href="https://github.com/jhun3030/complete-javascript-course-master/tree/main/07-Pig-Game/starter"
+            class="project"
+            target="_blank"
+            data-type="javaScript"
+          >
+            <img src="./imgs/projects/work_project_4.png" class="project__img" alt="project4 image" />
             <div class="project__description">
               <h4>Pig Game</h4>
               <span>JavaScript & DOM Project 2</span>
+              <span class="work__state">- In Progress -</span>
             </div>
           </a>
-          <a href="#" class="project" target="_blank">
+          <a class="project" target="_blank" data-type="htmlCss">
             <img src="./imgs/projects/work_project_5.png" class="project__img" alt="project5 image" />
             <div class="project__description">
               <h4>Omnifood Project</h4>
               <span>Responsive Web Design</span>
-              <span class="work__state"> - In Progress - </span>
+              <span class="work__state"> - Comming Soon - </span>
             </div>
           </a>
-          <a href="#" class="project" target="_blank">
-            <img src="./imgs/projects/project6.png" class="project__img" alt="project6 image" />
+          <a class="project" target="_blank" data-type="javaScript">
+            <img src="./imgs/projects/work_project_6.png" class="project__img" alt="project6 image" />
             <div class="project__description">
               <h4>Forkify App</h4>
               <span>A modern application using JavaScript</span>
-              <span class="work__state">- Commming Soon -</span>
+              <span class="work__state">- Comming Soon -</span>
             </div>
           </a>
         </div>
@@ -253,9 +269,11 @@
         </a>
       </div>
       <p class="contact__rights">2022 jhun3030 - All Rights Reserved</p>
+      <p class="contact__rights">Ellie from Dream Coding</p>
+      <p class="contact__rights">Jonas Schmedtmann from Udemy</p>
     </section>
 
-    <!-- Arrow up -->
+    <!-- Arrow up -->a
     <button class="arrow-up">
       <i class="fas fa-arrow-up"></i>
     </button>
