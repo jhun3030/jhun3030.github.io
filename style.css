@@ -580,10 +580,7 @@ button {
 
   .navbar__toggle-btn {
     display: block;
-  }
-
-  .navbar__toggle-btn i {
-    font-size: 1em;
+    padding: 0;
   }
 
   #navbar {
