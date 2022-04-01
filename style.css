@@ -289,6 +289,10 @@ button {
   width: 100px;
 }
 
+#likelion_logo {
+  width: 100px;
+}
+
 .job__description {
   margin: 0 16px;
 }
@@ -636,5 +640,9 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  .contact__email {
+    font-size: var(--font-small);
   }
 }

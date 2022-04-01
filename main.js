@@ -40,11 +40,10 @@ navbarToggleBtn.addEventListener(`click`, function () {
 // transparent home smooth
 const home = document.querySelector(`.home__container`);
 const homeHeight = home.getBoundingClientRect().height;
-
 const controlOpacity = function () {
-  // console.log(1 - window.scrollY / homeHeight);
+  console.log(1 - window.scrollY / homeHeight);
   home.style.opacity = `${1 - window.scrollY / homeHeight}`;
-  return 1 - window.scrollY / homeHeight;
+  // return 1 - window.scrollY / homeHeight;
 };
 
 document.addEventListener(`scroll`, controlOpacity);
